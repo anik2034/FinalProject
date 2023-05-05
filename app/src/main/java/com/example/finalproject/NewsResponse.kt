@@ -1,8 +1,9 @@
 package com.example.finalproject
-
+import android.os.Parcelable
+import java.io.Serializable
 import com.google.gson.annotations.SerializedName
 
-data class NewsResponse(
+data class NewsResponse (
     @SerializedName("status")
     var status: String?,
     @SerializedName("totalResults")
@@ -12,9 +13,9 @@ data class NewsResponse(
 
 
 
-)
+): Serializable
 
-class ArticleResponse(
+class ArticleResponse (
     @SerializedName("source")
     var source: SourceResponse?,
     @SerializedName("author")
@@ -33,14 +34,14 @@ class ArticleResponse(
     var content: String?,
 
 
-    )
+    ) : Serializable
 
 class SourceResponse(
     @SerializedName("id")
     var id: String?,
     @SerializedName("name")
     var name: String?,
-)
+) : Serializable
 
 
 
